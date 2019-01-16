@@ -21,4 +21,13 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* init project: `rails new tdd-workshop --database=postgresql --skip-active-storage --skip-coffee -T -B`
+* add gems for dev env
+* add rubocop, and a rake task
+* add rspec and configs
+* add home controller as root route, add first spec. Run it successfully.
+
+* add travis CI yaml
+* import code into github repository
+* add github repository in travis site
+* update readme.md by adding travis badge, commit, push to github, trigger travis CI to run, pass it.
