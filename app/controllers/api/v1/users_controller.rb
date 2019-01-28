@@ -13,9 +13,37 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
+  def update
+    old_user =User.find_by_id(params[:id])
+    if old_user
+      if old_user.update_attributes(user_params)
+        render json:{},  status: 204
+      else
+        render json: {errors: old_user.errors}, status:422
+      end
+    else
+      render json: {errors:"record not found"}, status:404
+    end
+  end
+
+  def destroy
+    old_user =User.find_by_id(params[:id])
+    if old_user
+      if old_user.destroy
+        render json:{}, status:204
+      else
+        render json: {errors: old_user.errors}, status:422
+      end
+    else
+      render json: {errors:"record not found"}, status:404
+    end
+  end
+
   private
 
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation)
   end
+
+
 end
