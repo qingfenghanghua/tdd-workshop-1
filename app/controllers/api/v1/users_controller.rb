@@ -18,8 +18,6 @@ class Api::V1::UsersController < ApplicationController
     if old_user
       if old_user.update_attributes(user_params)
         render json:{},  status: 204
-      else
-        render json: {errors: old_user.errors}, status:422
       end
     else
       render json: {errors:"record not found"}, status:404
@@ -31,8 +29,6 @@ class Api::V1::UsersController < ApplicationController
     if old_user
       if old_user.destroy
         render json:{}, status:204
-      else
-        render json: {errors: old_user.errors}, status:422
       end
     else
       render json: {errors:"record not found"}, status:404

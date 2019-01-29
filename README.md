@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/qingfenghanghua/tdd-workshop-1.svg?branch=master)](https://travis-ci.org/qingfenghanghua/tdd-workshop-1)
 
+[![Coverage Status](https://coveralls.io/repos/github/qingfenghanghua/tdd-workshop-1/badge.svg?branch=master)](https://coveralls.io/github/qingfenghanghua/tdd-workshop-1?branch=master)
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
